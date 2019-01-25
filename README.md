@@ -28,15 +28,14 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager
 
-1.  Describe the biggest difference between `.forEach` & `.map`.
+1.  Describe the biggest difference between `.forEach` & `.map`. .map returns a value, forEach does not.
+2.  What is the difference between a function and a method? A method is a function that lives inside a class/prototype. As such, it is called by object.method() instead of just function().
+3.  What is closure? Function nested in a function. Because of its nesting, it has access to the outer function's scope so it's a good way to protect a variable from the rest of the code
+4.  Describe the four rules of the 'this' keyword. a)The value of 'this' will be the window object if the function is in the global scope. function whatever(){ console.log(this); //global scope } b) When a method is invoked, the value of 'this' will be the object preceeding the dot: let whatever = function(){ this.attr = "an attribute"; this.myMethod = function() { console.log(`this is ${this.attr}`); } } whatever.myMethod(); // this is assigned 'whatever' c) When using a constructor, the value of 'this' will be what is returned by the constructor: function Whatever(){ this.attr = "hello world", this.myMethod = function() { console.log(`${this.attr}`); } } let whoever = new Whatever(); // 'this' will equal this specific instance of Whatever
 
-2.  What is the difference between a function and a method?
+d) .call & .apply define 'this': (using above function) let aThing = new Whatever().call(whoever); //'this' will inherent whoever's values
 
-3.  What is closure?
-
-4.  Describe the four rules of the 'this' keyword.
-
-5.  Why do we need super() in an extended class?
+\} 5. Why do we need super() in an extended class? super allows the child class to inherent the properties and methods of the parent class. So without it, you may be extending the class but you have none of their goodies....if it'll even run. I feel like it'll throw an error if you try to do it without super though.
 
 ## Project Set up
 
