@@ -40,17 +40,17 @@ console.log(cuboid.surfaceArea()); // 130
 // logging out your volume and surface area.
 
 class CubeMaker extends CuboidMaker {
-  constructor(length, width, height) {
-    super(length, width, height);
+  constructor(length) {
+    super(length);
   }
   volume() {
     return Math.pow(this.length, 3);
   }
   surfaceArea() {
-    return Math.pow(6 * this.length, 2);
+    return 6 * Math.pow(this.length, 2);
   }
 }
 
-let cube = new CubeMaker(6, 6, 6);
+let cube = new CubeMaker(6);
 console.log(cube.volume());
 console.log(cube.surfaceArea());
